@@ -1,0 +1,10 @@
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\bin\Debug\Tugas2Dekstop_2377051001.exe.config
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\bin\Debug\Tugas2Dekstop_2377051001.exe
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\bin\Debug\Tugas2Dekstop_2377051001.pdb
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\bin\Debug\Tugas2Dekstop_2377051001.xml
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\obj\Debug\Tugas2Dekstop_2377051001.Form1.resources
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\obj\Debug\Tugas2Dekstop_2377051001.Resources.resources
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\obj\Debug\Tugas2Dekstop_2377051001.vbproj.GenerateResource.Cache
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\obj\Debug\Tugas2Dekstop_2377051001.exe
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\obj\Debug\Tugas2Dekstop_2377051001.xml
+c:\users\hp\documents\visual studio 2013\Projects\Tugas2Dekstop_2377051001\Tugas2Dekstop_2377051001\obj\Debug\Tugas2Dekstop_2377051001.pdb
