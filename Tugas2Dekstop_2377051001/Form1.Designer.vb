@@ -32,8 +32,6 @@ Partial Class Form1
         Me.cmbFakultas = New System.Windows.Forms.ComboBox()
         Me.cmbJurusan = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.chkLaki = New System.Windows.Forms.CheckBox()
-        Me.chkPerempuan = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtTugas = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,10 +42,13 @@ Partial Class Form1
         Me.btnGRADE = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.rbLakiLaki = New System.Windows.Forms.RadioButton()
+        Me.rbPerempuan = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -136,26 +137,6 @@ Partial Class Form1
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Jenis Kelamin"
         '
-        'chkLaki
-        '
-        Me.chkLaki.AutoSize = True
-        Me.chkLaki.Location = New System.Drawing.Point(128, 100)
-        Me.chkLaki.Name = "chkLaki"
-        Me.chkLaki.Size = New System.Drawing.Size(69, 17)
-        Me.chkLaki.TabIndex = 11
-        Me.chkLaki.Text = "Laki-Laki"
-        Me.chkLaki.UseVisualStyleBackColor = True
-        '
-        'chkPerempuan
-        '
-        Me.chkPerempuan.AutoSize = True
-        Me.chkPerempuan.Location = New System.Drawing.Point(236, 100)
-        Me.chkPerempuan.Name = "chkPerempuan"
-        Me.chkPerempuan.Size = New System.Drawing.Size(80, 17)
-        Me.chkPerempuan.TabIndex = 12
-        Me.chkPerempuan.Text = "Perempuan"
-        Me.chkPerempuan.UseVisualStyleBackColor = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -225,6 +206,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.rbPerempuan)
+        Me.GroupBox1.Controls.Add(Me.rbLakiLaki)
         Me.GroupBox1.Location = New System.Drawing.Point(19, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(594, 266)
@@ -243,22 +226,14 @@ Partial Class Form1
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         '
-        'DataGridView1
+        'btnClose
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 334)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(601, 259)
-        Me.DataGridView1.TabIndex = 27
-        '
-        'btnSave
-        '
-        Me.btnSave.Location = New System.Drawing.Point(81, 19)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 23)
-        Me.btnSave.TabIndex = 28
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnClose.Location = New System.Drawing.Point(344, 19)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(250, 23)
+        Me.btnClose.TabIndex = 30
+        Me.btnClose.Text = "Close"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'btnDelete
         '
@@ -269,14 +244,44 @@ Partial Class Form1
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'btnClose
+        'btnSave
         '
-        Me.btnClose.Location = New System.Drawing.Point(344, 19)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(250, 23)
-        Me.btnClose.TabIndex = 30
-        Me.btnClose.Text = "Close"
-        Me.btnClose.UseVisualStyleBackColor = True
+        Me.btnSave.Location = New System.Drawing.Point(81, 19)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.TabIndex = 28
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 334)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(601, 259)
+        Me.DataGridView1.TabIndex = 27
+        '
+        'rbLakiLaki
+        '
+        Me.rbLakiLaki.AutoSize = True
+        Me.rbLakiLaki.Location = New System.Drawing.Point(111, 88)
+        Me.rbLakiLaki.Name = "rbLakiLaki"
+        Me.rbLakiLaki.Size = New System.Drawing.Size(68, 17)
+        Me.rbLakiLaki.TabIndex = 0
+        Me.rbLakiLaki.TabStop = True
+        Me.rbLakiLaki.Text = "Laki-Laki"
+        Me.rbLakiLaki.UseVisualStyleBackColor = True
+        '
+        'rbPerempuan
+        '
+        Me.rbPerempuan.AutoSize = True
+        Me.rbPerempuan.Location = New System.Drawing.Point(214, 88)
+        Me.rbPerempuan.Name = "rbPerempuan"
+        Me.rbPerempuan.Size = New System.Drawing.Size(79, 17)
+        Me.rbPerempuan.TabIndex = 1
+        Me.rbPerempuan.TabStop = True
+        Me.rbPerempuan.Text = "Perempuan"
+        Me.rbPerempuan.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -292,8 +297,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtTugas)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.chkPerempuan)
-        Me.Controls.Add(Me.chkLaki)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmbJurusan)
         Me.Controls.Add(Me.cmbFakultas)
@@ -307,6 +310,8 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox2)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -323,8 +328,6 @@ Partial Class Form1
     Friend WithEvents cmbFakultas As System.Windows.Forms.ComboBox
     Friend WithEvents cmbJurusan As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents chkLaki As System.Windows.Forms.CheckBox
-    Friend WithEvents chkPerempuan As System.Windows.Forms.CheckBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtTugas As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -339,5 +342,7 @@ Partial Class Form1
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents btnClose As System.Windows.Forms.Button
+    Friend WithEvents rbPerempuan As System.Windows.Forms.RadioButton
+    Friend WithEvents rbLakiLaki As System.Windows.Forms.RadioButton
 
 End Class

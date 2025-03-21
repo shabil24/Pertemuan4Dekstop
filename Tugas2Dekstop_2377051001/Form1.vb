@@ -62,8 +62,8 @@
         txtUAS.Clear()
         cmbFakultas.SelectedIndex = -1
         cmbJurusan.SelectedIndex = -1
-        chkLaki.Checked = False
-        chkPerempuan.Checked = False
+        rbLakiLaki.Checked = False
+        rbPerempuan.Checked = False
         btnGrade.Text = "-"
         txtNPM.Enabled = True
         txtNPM.Focus()
@@ -77,7 +77,7 @@
             Exit Sub
         End If
 
-        Dim jenisKelamin As String = If(chkLaki.Checked, "Laki-laki", If(chkPerempuan.Checked, "Perempuan", ""))
+        Dim jenisKelamin As String = If(rbLakiLaki.Checked, "Laki-laki", If(rbPerempuan.Checked, "Perempuan", ""))
         If jenisKelamin = "" Then
             MessageBox.Show("Harap pilih jenis kelamin!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
@@ -122,11 +122,11 @@
             txtNPM.Text = row.Cells(0).Value.ToString()
             txtNama.Text = row.Cells(1).Value.ToString()
             If row.Cells(2).Value.ToString() = "Laki-laki" Then
-                chkLaki.Checked = True
-                chkPerempuan.Checked = False
+                rbLakiLaki.Checked = True
+                rbPerempuan.Checked = False
             Else
-                chkLaki.Checked = False
-                chkPerempuan.Checked = True
+                rbLakiLaki.Checked = False
+                rbPerempuan.Checked = True
             End If
             cmbFakultas.Text = row.Cells(3).Value.ToString()
             cmbJurusan.Text = row.Cells(4).Value.ToString()
@@ -137,5 +137,13 @@
 
             txtNPM.Enabled = False ' NPM tidak bisa diubah
         End If
+    End Sub
+
+    Private Sub txtNpm_TextChanged(sender As Object, e As EventArgs) Handles txtNpm.TextChanged
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class
